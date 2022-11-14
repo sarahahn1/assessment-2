@@ -35,9 +35,11 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce((a, c) => {
+    return a + c.price
+}, 0)
 
-
+console.log(summedPrice)
 //////////////////PROBLEM 2////////////////////
 /*  
     Write a function called `calcFinalPrice` that
@@ -54,8 +56,11 @@ const cart = [
 */
 
 //CODE HERE
+function calcFinalPrice(cartTotal, couponValue, tax) {
+    return carttotal + cartTotal * tax - couponValue
+}
 
-
+console.log(calcFinalPrice(20, 4, 0.10))
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -79,6 +84,11 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
+    name: (string) need to know name for who
+    address: (string) Where to take product
+    email: Promotions
+    card detail: (string) they need to pay
+    phone number: (number) call if order doesn't go through
 
 */
 
@@ -88,3 +98,11 @@ const cart = [
 */
 
 //CODE HERE
+let custObj = {
+    name: "sarah",
+    address: "8679 S Piper Ln",
+    email: "sarahahn2004@gmail.com",
+    card: 80293489320039,
+    phone: 8019928293
+
+}

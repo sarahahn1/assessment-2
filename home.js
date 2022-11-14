@@ -23,10 +23,9 @@
 
 //CODE HERE
 
-let greetUser = (username) => {
-return sarahahn
-}
-console.log('sarahahn')
+const greetUser = (username) => {`welcome back, ${username}`}
+
+console.log(greetUser("sarah"))
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -52,16 +51,25 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
 
-function canWeDeliver (zipcode) {
-    let j = deliveryAreaZipCodes -1
-    for(i=0; i < deliveryAreaZipCodes.length; i++) {
-    if (zipcode[i] !== zipcode[j]){
-    return ('your in our delivery zone')
+// function canWeDeliver (zipcode) {
+//     let j = deliveryAreaZipCodes -1
+//     for(i=0; i < deliveryAreaZipCodes.length; i++) {
+//     if (zipcode[i] !== zipcode[j]){
+//     return ('your in our delivery zone')
+//     }
+//     j--
+//     }
+//     return ('sorry your not in the zone')
+// }
+
+function canWeDeliver (zipCodes) {
+    if(deliveryAreaZipCodes.includes(zipCodes)) {
+        return 'Youre in our delivery zone'
+    } else {
+        return 'sorry your not in the zone'
     }
-    j--
-    }
-    return ('sorry your not in the zone')
 }
+console.log(canWeDeliver('84149'))
 
 /* 
     Problem 2 Continued
@@ -81,7 +89,15 @@ function canWeDeliver (zipcode) {
 */
 
 // CODE HERE
-function canWeDeliverTwo
+function canWeDeliverTwo(zipCode) {
+    for(let i = 0; i < deliveryAreaZipCodes.length; i++) {
+        if(zipCode === deliveryAreaZipCodes[i]) {
+            return 'You are in the area'
+        } else {
+            return ' You are not in the area'
+        }
+    }
+}
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -117,6 +133,7 @@ function canWeDeliverTwo
 */
 
 //CODE HERE
+deals[0].title = deals[0].title.replace ('15', '10')
 
 
 
@@ -132,4 +149,5 @@ function canWeDeliverTwo
     whitespace in this string, since it seems
     to be displaying wrong on the live site.
 */
-//code here
+//codehere                 
+deals[0].desc = deals[1].desc.replace('march', 'april').trim()

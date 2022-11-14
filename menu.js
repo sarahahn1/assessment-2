@@ -30,9 +30,13 @@
     'kids'
 */
 
-//CODE HERE
 let pizza = {
-    name
+ name: 'cheese',
+ price: 12,
+ category: "pizza",
+ popularity: 2,
+ rating: 5,
+ tags: ['delicious', 'filling', 'not-gross']
 }
 
 
@@ -45,7 +49,7 @@ let pizza = {
 */
 
 //CODE HERE
-
+console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -55,7 +59,7 @@ let pizza = {
 */
 
 //CODE HERE
-
+console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -65,7 +69,7 @@ let pizza = {
 */
 
 //CODE HERE
-
+let {price} = pizza
 
 /*
     Fourth, and last, destructure the category
@@ -75,7 +79,7 @@ let pizza = {
 */
 
 //CODE HERE
-
+let {category} = pizza
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -90,7 +94,49 @@ let pizza = {
 */
 
 //CODE HERE
+const foodArr = [ 
+    {
+        name: 'cheese',
+        price: 12,
+        category: "pizza",
+        popularity: 2,
+        rating: 5,
+        tags: ['delicious', 'filling', 'not-gross']
+       },
+       {
+        name: 'eggs',
+        price: 5,
+        category: "breakfast",
+        popularity: 10,
+        rating: 10,
+        tags: ['protein', 'tasty', ]
+       },
+       {
+        name: 'yogurt',
+        price: 12,
+        category: "dairy",
+        popularity: 10,
+        rating: 5,
+        tags: ['smooth', 'filling']
+       },
+       {
+        name: 'carrot',
+        price: 5,
+        category: "vegetable",
+        popularity: 9,
+        rating: 7,
+        tags: ['healthy', 'orange']
+       },
+       {
+        name: 'cake',
+        price: 12,
+        category: "dessert",
+        popularity: 11,
+        rating: 11,
+        tags: ['scrumotious', 'sweet']
+       }
 
+]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -105,11 +151,12 @@ let pizza = {
     your food objects has.
 */
 
+
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
-
+const filteredFood = foodArr.filter((foodObj) => {
+  return foodObj.tags.includes('delicious')
+})
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -151,6 +198,15 @@ let pizza = {
 */
 
 //CODE HERE
+function filterByProperty(property, number, type) {
+    return foodArr.filter((foodObj) => {
+        if (type === 'above') {
+            return foodObj[property] > number
+        }else if (type === 'below') {
+            return foodObj[property] < number
+        }
+    })
+}
 
 
 /*
@@ -161,3 +217,4 @@ let pizza = {
 */
 
 //CODE HERE
+console.log(filteredByProperty('price', 6, 'below'))

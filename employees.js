@@ -28,8 +28,7 @@ this.shifts = shifts
     }
 }
 function  getScheudle () {
-    console.log(`${name} works ${`shifts`}`){
-    }
+    console.log(`${name} works ${`shifts`}`)
     }
 
 /*
@@ -43,16 +42,14 @@ function  getScheudle () {
 */
 
 //CODE HERE
-let empOne = new Employee 
-name: 'jessie'
-shifts: 'afternoon'
+let empOne = new Employee('Jess', ' weekday mornings', 'weekday afternoons' )
 /*
     Call the `getSchedule` method on the
     `empOne` object.
 */
 
 //CODE HERE
-getSchedule()
+empOne.getSchedule()
 
 /*
     Make a copy of the empOne object
@@ -67,8 +64,8 @@ getSchedule()
 */
 
 //CODE HERE
-
-let empTwo = empOne
+const empTwo = {...empOne, name: 'Nick'}
+console.log(empTwo)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -94,7 +91,7 @@ let empTwo = empOne
 */
 
 //CODE HERE
-getEmployees() {
+function getEmployees() {
     console.log (`${name} manges ${employees}`)
 }
 
@@ -112,18 +109,20 @@ getEmployees() {
 
 //CODE HERE
 
-let manager = {
-    name: 'winston', 
-    shifts: 'weekday mornings, weekday afternoons',
-    employee: 'cece and schmidt',
+// 
 
-}
+// 
+let manger = new Manager('winston', 'weekday mornings, weekday afternoons', ['Cece', "schmidt"])
+    
+
+    
 /*
     Call the `getEmployees` method on the
     `manager` object.  
 */
 
 //CODE HERE
+manager.getEmployees()
 
 /*
     Call the `addEmployee` method on the 
@@ -132,7 +131,7 @@ let manager = {
 */
 
 //CODE HERE 
-
+manager.addEmployee('coach')
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
@@ -140,3 +139,4 @@ let manager = {
 */
 
 //CODE HERE
+manager.getEmployees()
