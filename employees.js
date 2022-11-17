@@ -26,11 +26,11 @@ class Employee {
 this.name = name
 this.shifts = shifts
     }
-}
-function  getScheudle () {
-    console.log(`${name} works ${`shifts`}`)
-    }
 
+     getScheudle() {
+    console.log(`${this.name} works ${this.shift}`)
+    }
+}
 /*
     Create a new instance of your class.
     Save it to a variable called `empOne`.
@@ -42,14 +42,14 @@ function  getScheudle () {
 */
 
 //CODE HERE
-let empOne = new Employee('Jess', ' weekday mornings', 'weekday afternoons' )
+let empOne = new Employee('Jess', ' weekday mornings', 'weekday afternoons')
 /*
     Call the `getSchedule` method on the
     `empOne` object.
 */
 
 //CODE HERE
-empOne.getSchedule()
+ empOne.getSchedule()
 
 /*
     Make a copy of the empOne object
@@ -91,8 +91,18 @@ console.log(empTwo)
 */
 
 //CODE HERE
-function getEmployees() {
-    console.log (`${name} manges ${employees}`)
+class Manager extends Employee {
+    constructor (name, shifts, employees) {
+        super (name, shifts)
+        this.employees = employees
+    }
+
+    getEmployees() {
+        console.log(`${this.name} manages ${this.employees}`)
+    }
+    addEmployee(emp) {
+        this.employees.push(emp)
+    }
 }
 
 
@@ -109,10 +119,7 @@ function getEmployees() {
 
 //CODE HERE
 
-// 
-
-// 
-let manger = new Manager('winston', 'weekday mornings, weekday afternoons', ['Cece', "schmidt"])
+let manager = new Manager('winston', 'weekday mornings, weekday afternoons', ['Cece', "schmidt"])
     
 
     

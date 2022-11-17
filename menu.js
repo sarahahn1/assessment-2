@@ -217,4 +217,4 @@ function filterByProperty(property, number, type) {
 */
 
 //CODE HERE
-console.log(filteredByProperty('price', 6, 'below'))
+console.log(filterByProperty('price', 6, 'below'))

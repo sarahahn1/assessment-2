@@ -57,7 +57,7 @@ console.log(summedPrice)
 
 //CODE HERE
 function calcFinalPrice(cartTotal, couponValue, tax) {
-    return carttotal + cartTotal * tax - couponValue
+    return cartTotal + cartTotal * tax - couponValue
 }
 
 console.log(calcFinalPrice(20, 4, 0.10))
@@ -102,7 +102,7 @@ let custObj = {
     name: "sarah",
     address: "8679 S Piper Ln",
     email: "sarahahn2004@gmail.com",
-    card: 80293489320039,
+    card: '80293489320039',
     phone: 8019928293
 
 }

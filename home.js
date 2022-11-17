@@ -23,7 +23,7 @@
 
 //CODE HERE
 
-const greetUser = (username) => {`welcome back, ${username}`}
+const greetUser = (username) => ` welcome back$ {username}`
 
 console.log(greetUser("sarah"))
 
@@ -90,14 +90,19 @@ console.log(canWeDeliver('84149'))
 
 // CODE HERE
 function canWeDeliverTwo(zipCode) {
-    for(let i = 0; i < deliveryAreaZipCodes.length; i++) {
-        if(zipCode === deliveryAreaZipCodes[i]) {
-            return 'You are in the area'
-        } else {
-            return ' You are not in the area'
+    let canDeliver = 'you are not in the area'
+    deliveryAreaZipCodes.forEach((element) => {
+        if(zipCode === element) {
+            canDeliver= 'You are in the area'
         }
-    }
-}
+        })
+   
+        
+            return canDeliver
+    }   
+    
+
+console.log(canWeDeliverTwo('5205'))
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -112,16 +117,16 @@ function canWeDeliverTwo(zipCode) {
     Read on for more instructions.
 */
 
-//const deals = [
-//     {
-//         title: '15% Off!', 
-//         desc: 'Applied to your entire order when you spend $30 or more'
-//     }, 
-//     {
-//         title: 'Free Kids Meal with 2 Regular Entrees', 
-//         desc: '   This deal lasts until the end of March! '
-//     }
-// ]
+const deals = [
+    {
+        title: '15% Off!', 
+        desc: 'Applied to your entire order when you spend $30 or more'
+    }, 
+    {
+        title: 'Free Kids Meal with 2 Regular Entrees', 
+        desc: '   This deal lasts until the end of March! '
+    }
+]
 
 /*
     The owner has decided to take the 15% off
@@ -134,7 +139,7 @@ function canWeDeliverTwo(zipCode) {
 
 //CODE HERE
 deals[0].title = deals[0].title.replace ('15', '10')
-
+console.log(deals)
 
 
 /*
@@ -150,4 +155,5 @@ deals[0].title = deals[0].title.replace ('15', '10')
     to be displaying wrong on the live site.
 */
 //codehere                 
-deals[0].desc = deals[1].desc.replace('march', 'april').trim()
+deals[0].desc = deals[0].desc.replace('March', 'April').trim()
+console.log(deals)
